@@ -34,7 +34,7 @@ export function dailyTimer(startTime: Time, endTime: Time, timerStatusCallback: 
         const result = isNowInRange(startTime, endTime);
         if (result !== isNowInRangeResult) {
             isNowInRangeResult = result;
-            const timerStatus = timerStatusMap.get(isNowInRangeResult)
+            const timerStatus = timerStatusMap.get(isNowInRangeResult);
             timerStatusCallback(timerStatus);
         }
     }, refreshTime)

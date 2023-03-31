@@ -2,19 +2,20 @@
 
 The `daily-timer` package includes the `dailyTimer` function and the two
 custom types `Time` and `TimerStatus`.
+ 
+---
 
-## dailyTimer Function
+## dailyTimer function
 
 The `dailyTimer` function is a JavaScript function that takes in three
 parameters, namely `startTime`, `endTime`, and `timerStatusCallback`.
 
+`timerStatus` is internally updated every second into the package and whenever its value changes the callback is triggered. So the callback result  will be `TimerStatus.ON` when the current time is between startTime and endTime, otherwise will be `TimerStatus.OFF`.
 
-When the current time reachs `startTime` the callback is invoked with `TimerStatus.ON` value, When the current time reachs `endTime` the callback is invoked with `TimerStatus.OFF` value.
-
+> Note that current time is intended to be NodeJs or Browser time
 
 
 ### Function Signature
-
 
 `dailyTimer(startTime, endTime, callback: (timerStatus) => void) => void`
 
@@ -33,7 +34,8 @@ dailyTimer({ hh: 12, mm: 0 }, { hh: 12, mm: 10 }, console.log);
     and 'OFF' at 12:10 (endTime) every day.
 */
 ```
-### Types
+---
+## Types
 
 ```typescript
 interface Time {
