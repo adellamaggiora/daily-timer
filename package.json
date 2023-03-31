@@ -1,0 +1,18 @@
+{
+  "name": "daily-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx ts-node index.ts",
+    "dev": "npx nodemon index.ts",
+    "publish": "npx tsc && npm publish"
+  },
+  "author": "Andrea Della Maggiora <adm91@email.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
